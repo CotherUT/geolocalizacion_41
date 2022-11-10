@@ -70,6 +70,12 @@
     <Content Include="geolocalizacionMarador.html" />
     <Content Include="geolocalizacion_41.html" />
     <Content Include="geolocalizacion_41.js" />
+    <Content Include="geolocalizacion_marcadores.html" />
+    <Content Include="imagenes\m1.png" />
+    <Content Include="imagenes\m2.png" />
+    <Content Include="imagenes\m3.png" />
+    <Content Include="imagenes\m4.png" />
+    <Content Include="imagenes\m5.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

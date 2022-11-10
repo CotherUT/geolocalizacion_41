@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        #map {
+            width: 50%;
+            height: 400px;
+            background-color: gray;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <h1>Nuestras Sucursales</h1>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            //Declarar variable para que se aperture el mapa de preferencia
+            //lo mas centrico posible a donde tengo la mayoria de los puntos
+            var map = new google.maps.Map(document.getElementById('map'), { zoom: 15, center: { lat: 21.48108225996614, lng: - 104.87972151219624 } });
+            //Crear una variable de tipo arreglo para determinar las etiquetas de que le colocaran a cada marcador
+            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            //Agregar los marcadores al mapa en base a un arreglo de ubicaciones
+            var markers = locations.map(function (location, i ){
+                return new google.maps.Marker({
+                    position: location,
+                    label: labels[i % labels.length]
+                });
+            });
+            //Colocar la imagen en cada marcador
+            var markerCluster = new MarkerVlusterer(map, markers, { imagePath: 'imagenes/m' });
+        }
+    </script>
+</body>
+</html>
