@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        #map{
+            width: 50%;
+            height: 400px;
+            background-color: gray;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <h1>Geolocalizacion API Google un marcador</h1>
+    <h2>Ubicacion de matriz</h2>
+    <div id="map"></div>
+    <script>
+        //Funcion para inicializar y colocar el mapa en la pagina
+        function initMap() {
+            //Declarar una variable que se le asigne la longitud y latitud de lal UTN
+            var utn = { lat: 21.424081936181672, lng: - 104.89838427287113 };//Ubicacion de la UTN
+            //Declarar variable para ubicar UTN
+            var map = new google.maps.Map(document.getElementById('map'), { zoom: 15, center: utn });
+            //Posicionar el marcador en el mapa
+            var marker = new google.maps.Marker({ position: utn, map: map });
+        }
+    </script>
+    <script async defer 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS4fB3Wb8JS1lwkNBcUNKzvWMVTssyP4E&callback=initMap">
+
+    </script>
+</body>
+</html>
